@@ -1,19 +1,46 @@
 /* 
+This file contains the CSS which corresponds to the Module2 assignment.
 
+- A convenient way to understand the naming convention: 3 cards each with a tag and description.
+  = See corresponding div class names here and index.html
+- Comments added to make the assignment requirements stand out.
+
+Attribution: 
+- Coursera:  HTML, CSS, and Javascript for Web Developers;
+- https://www.w3schools.com/
+
+Author: Erick Hong;
+Course:  JHU/787;
+Instructor: Yaakov Chaikin;
 */
 
+/*******************************   
+- Reset default browser margin and padding
+- Font size is set to 100% of default  
+ ******************************/
 body {
+  margin: 0;  
+  padding: 0;
   background-color: #F8F8F8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
 }
 
+/*******************************   
+- Font size is set to 75% larger than default with spacing
+ ******************************/
 .page-title {
   text-align: center;
-  font-size: 130%;
+  font-size: 175%;
+  margin: 50px;
 }
 
+/*******************************   
+- Overall container adds padding to the left and right to match spacing between cards
+ ******************************/
 .container {
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -23,31 +50,53 @@ body {
   background-color: #F8F8F8;
 }
 
+/*******************************   
+- Border box and relative positioning
+- Background set
+ ******************************/
 .card {
   margin: 10px;
   background: #F5E6CC;
   text-align: left;
   height: auto;
-  border: 1px solid #000000;      
+  border: 1px solid #000000;     
+  position: relative; 
+  box-sizing: border-box;
 }
 
+/*******************************   
+- Absolute positioning anchored to the right
+- Size of text is 25% larger than default text
+ ******************************/
 .tag {
   width: 150px;
   text-align: center;
-  float: right;
   background: white;
   border-bottom: 1px solid #000000;   
   border-left: 1px solid #000000;
+  position: absolute;
+  right: 0px;
+  font-weight: bold;
+  font-size: 125%;
 }
 
+/*******************************   
+- Margin add to lower the text below the tag for 
+ ******************************/
 .desc {
   clear: right;
   padding: 5px;
   font-size: 100%;
+  margin-top: 20px;
+  padding: 10px;
 }
 
+/*******************************   
+- Coloring each individual tags by id
+ ******************************/
 #tag1 {
-  background: #84CEEB;
+  background: #85DCBA;
+  p
 }
 
 #tag2 {
@@ -55,14 +104,13 @@ body {
 }
 
 #tag3 {
-  background: #85DCBA;
+  background: #84CEEB;
 }
 
 [class*="col"] {
   float: left;
   background-color: #F8F8F8;
 }
-
 
 /********** Large devices: >= 992 px **********/
 
