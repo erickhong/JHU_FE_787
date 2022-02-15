@@ -1,0 +1,90 @@
+/* 
+This file contains the CSS which corresponds to the Module3 assignment.
+
+- The class and elements here are mainly from Bootstrap. 
+
+Attribution: 
+- Coursera:  HTML, CSS, and Javascript for Web Developers;
+- https://www.w3schools.com/
+
+Author: Erick Hong;
+Course:  JHU/787;
+Instructor: Yaakov Chaikin;
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.company-title {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  font-size: 200%;
+  font-weight: bold;  
+  margin-top: 10px;
+}
+
+#header-nav {
+  background-color: #F5E6CC;
+  border-radius: 0;
+  border: 0;
+}
+
+.para {
+  background-color: lightgray;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.menu-text {
+  font-size: 140%;
+}
+
+nav.container-fluid {
+  margin-bottom: 10px;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.navbar {
+  min-height: 70px;
+}
+
+.container-fluid {
+  margin-right: 15px;
+  margin-left:  15px;
+}
+
+.navbar-nav{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+li:nth-child(1), li:nth-child(3) {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-style: solid;
+  border-color: grey;
+}
+
+li:nth-child(2) {
+  border-right-width: 1px;
+  border-left-width: 1px;
+  border-right: grey;
+  border-leftt: grey;  
+}
