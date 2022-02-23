@@ -1,3 +1,6 @@
+//Homework4
+//Erick Hong, 2/22/2022, Chaikin/787
+
 // NOTE! The steps in this file are basically identical to the ones you
 // performed in the SpeakHello.js file.
 
@@ -5,8 +8,6 @@
 // See Lecture 52, part 2
 
 (function(window) {
-
-
 
 // STEP 7: Create an object, called 'byeSpeaker' to which you will attach
 // the "speak" method and which you will expose to the global context
@@ -29,11 +30,9 @@
     console.log(speakWord + " " + name);
   }
 
-
   byeSpeaker.speakSimple = function (name) {
     return speakWord + " " + name;    
   }
-
 
 // STEP 9: Expose the 'byeSpeaker' object to the global scope. Name it
 // 'byeSpeaker' on the global scope as well.

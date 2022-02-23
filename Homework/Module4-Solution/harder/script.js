@@ -1,3 +1,6 @@
+//Homework4
+//Erick Hong, 2/22/2022, Chaikin/787
+
 // *******************************
 // START HERE IF YOU WANT A MORE CHALLENGING STARTING POINT FOR THIS ASSIGNMENT
 // *******************************
@@ -64,23 +67,6 @@ WARNING!!! WARNING!!!
   //     helloSpeaker.speak(name);
   //   }
   // }
-
-
-  //https://www.freecodecamp.org/news/reduce-f47a7da511a9/
-  var fruitBasket = ['banana', 'cherry', 'cherry'];
-
-  var obj = fruitBasket.reduce((acc, fruit) => {
-      console.log(acc);
-      console.log(fruit);
-      acc['fruit'] = 1;
-  }, [])
-
-
-
-
-
-
-
 
 
 // var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];

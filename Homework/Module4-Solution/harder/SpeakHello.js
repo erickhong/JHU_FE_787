@@ -1,3 +1,7 @@
+//Homework4
+//Erick Hong, 2/22/2022, Chaikin/787
+
+
 // STEP 2: Wrap the entire contents of SpeakHello.js inside of an IIFE
 // See Lecture 52, part 2
 
