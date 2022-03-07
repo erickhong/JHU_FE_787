@@ -11,12 +11,14 @@ Attribution:
   = https://www.w3schools.com/angular/ng_ng-style.asp
 Author: Erick Hong
 */
-(function() {
+(function() {       //IIFE
 'use strict';
 
+//Declaring app and function name
 angular.module('LunchCheck', [])
 .controller('LunchCheckController', LunchCheckController);
 
+//Protect from minification
 LunchCheckController.$inject = ['$scope'];
 
 function LunchCheckController($scope) {
