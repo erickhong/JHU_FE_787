@@ -1,0 +1,42 @@
+<!--
+Assignment#6
+The view exhibiting loose coupling with the view model with AngularJS.
+
+Author: Erick Hong
+-->
+<!doctype html>
+<html lang="en" ng-app="LunchCheck"> <!-- EH -->
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
+  </head>
+<body>
+   <div class="container" ng-controller="LunchCheckController">   <!-- EH -->
+     <h1>Lunch Checker</h1>
+     <div>                      <!-- EH -->
+        <p>Note: An empty string containing only spaces between commas does not count as a word.</p>
+        <p>(ex. a, ,c counts as 2 words. a,     , b also counts as 2 words. ,,,, counts as zero words.)</p>
+     </div>
+         <div class="form-group">
+             <input id="lunch-menu" type="text"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control" ng-model="lunchbox">              <!-- EH -->
+         </div>
+
+         <div class="form-group">   <!-- EH -->
+             <button class="btn btn-default" ng-click="tooMuchFood();">Check If Too Much</button>
+         </div>
+         <div class="form-group message">
+           <div ng-style="decorator">           <!-- EH -->
+               {{response}}
+           </div>
+         </div>
+   </div>
+</body>
+</html>
