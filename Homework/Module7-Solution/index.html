@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Shopping List Check Off</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Note: angular.min.js does not work with my browser. Forum suggested the following-->
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+      .emptyMessage {
+        font-weight: bold;
+        color: red;
+        font-size: 1.2em;
+      }
+      li {
+        margin-bottom: 7px;
+        font-size: 1.2em;
+      }
+      li > button {
+        margin-left: 6px;
+      }
+      button > span {
+        color: green;
+      }
+    </style>
+  </head>
+<body ng-app="ShoppingListCheckOff">
+  <div class="container">
+  <h1>Shopping List Check Off</h1>
+  <div class="row">
+
+    <!-- To Buy List -->
+    <div class="col-md-6" ng-controller="ToBuyController as toBuy">
+     <h2>To Buy:</h2>
+     <ul>
+
+       <li ng-repeat="item in toBuy.showItems">Buy
+           <input type="text" class="text-center" ng-model="toBuy.showItems[$index].quantity" placeholder={{item.quantity}} size={{toBuy.getBoxSize($index)}}>
+           {{item.name}} at {{item.pricePerItem  | AngularDollars}}
+           <button class="btn btn-default" ng-click="toBuy.transitionItem($index);">
+               <span class="glyphicon glyphicon-ok"></span>Bought
+           </button>
+       </li>
+     </ul>
+     <div class="emptyMessage" ng-if="!toBuy.showItems.length">Everything is bought!</div>
+     <div class="alert alert-danger" ng-if="toBuy.errorMessage">{{toBuy.errorMessage}}</div>
+
+    <!-- Already Bought List -->
+    <div class="col-md-6" ng-controller="AlreadyBoughtController as purchased">
+     <h2>Already Bought:</h2>
+     <ul>
+       <li ng-repeat="item in purchased.showPurchasedItems">Bought {{item.quantity}} {{item.name}} for total price of {{purchased.getTotalPrice($index) | AngularDollars}}</li>
+     </ul>
+     <div class="emptyMessage" ng-if="!purchased.showPurchasedItems.length">Nothing bought yet.</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
