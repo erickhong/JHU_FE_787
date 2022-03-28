@@ -31,7 +31,7 @@
   <div class="row">
 
     <!-- To Buy List -->
-    <div class="col-md-6" ng-controller="ToBuyController as toBuy">
+    <div class="col-md-12" ng-controller="ToBuyController as toBuy">
      <h2>To Buy:</h2>
      <ul>
 
@@ -47,7 +47,7 @@
      <div class="alert alert-danger" ng-if="toBuy.errorMessage">{{toBuy.errorMessage}}</div>
 
     <!-- Already Bought List -->
-    <div class="col-md-6" ng-controller="AlreadyBoughtController as purchased">
+    <div class="col-md-12" ng-controller="AlreadyBoughtController as purchased">
      <h2>Already Bought:</h2>
      <ul>
        <li ng-repeat="item in purchased.showPurchasedItems">Bought {{item.quantity}} {{item.name}} for total price of {{purchased.getTotalPrice($index) | AngularDollars}}</li>
