@@ -104,7 +104,7 @@ function ShoppingListCheckOffService(){
         if((Number.isNaN(quantity)) || (quantity < 0)){
             throw new Error("Quantity was not a valid integer greater than or equal to zero.");
         } else if (quantity > 10000) {
-            throw new Error("Quantity is way too large, let's be realistic about this purchase!");
+            throw new Error("Quantity is greater than 10,000. Let's be realistic about this purchase! ");
         } else {
             itemsToBuy[itemIndex].quantity = quantity
             //Call the setter
