@@ -50,7 +50,7 @@ function NarrowItDownController(MenuSearchService) {
             }
             else {
                 narrow.message = "Nothing found!";
-                //narrow.found = [];
+                narrow.found = [];
             }
         });
     };
