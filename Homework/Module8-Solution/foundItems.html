@@ -1,0 +1,9 @@
+<div>
+    <ul>
+    <li ng-repeat="item in narrow.foundItems">
+        {{item.name}}, {{item.short_name}}, {{item.description}}
+        <input type="button" ng-click="narrow.onRemove({index: $index})" class="btn btn-sm " value="Don't want this one!">
+    </li>
+    <ul>
+</div>
+<div class="alert alert-danger" role="alert" ng-show="narrow.onEmpty">{{narrow.onEmpty}}</div>
