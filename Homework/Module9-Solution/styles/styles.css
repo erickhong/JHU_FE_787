@@ -16,16 +16,10 @@ input[type="text"] {
   font-size: 50px;
 }
 
-.home a:hover {
+.home a {
   color: dimgrey;
   text-decoration: none;
 }
-
-.home a:visited {
-    color: dimgrey;
-    text-decoration: none;
-}
-
 
 .topNav {
   text-align: left;
@@ -42,24 +36,20 @@ a:link {
   text-decoration: none;
 }
 
-/* visited link */
 a:visited {
   color: green;
   text-decoration: none;
 }
 
-/* mouse over link */
 a:hover {
   color: hotpink;
   text-decoration: none;
 }
 
-/* selected link */
 a:active {
   color: hotpink;
   text-decoration: none;
 }
-
 
 .narrow-button {
   float: left;
