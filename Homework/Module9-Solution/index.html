@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Restaurant</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+<body ng-app="MenuApp">
+  <div class="home" ui-sref-active="active" ui-sref="home"><a href="#">My Restaurant</a></div>
+  <div class="topNav" ui-sref-active="active" ui-sref="categories"><a href="#">Menus</a></div>
+
+  <!-- Template views -->
+  <ui-view></ui-view>
+
+  <!-- Libraries -->
+  <script src="js/lib/jquery-3.1.0.min.js"></script>
+  <script src="js/lib/angular.js"></script>
+  <script src="js/lib/angular-ui-router.js"></script>
+
+  <!-- Modules -->
+  <script src="js/menuapp.module.js"></script>
+  <script src="js/data.module.js"></script>
+
+  <!-- Controllers -->
+  <script src="js/categories.controller.js"></script>
+  <script src="js/items.controller.js"></script>
+
+  <!-- Services -->
+  <script src="js/menudata.service.js"></script>
+
+  <!-- Components -->
+  <script src="js/categories.component.js"></script>
+  <script src="js/items.component.js"></script>
+
+  <!-- routes.js should be below dependencies  -->
+  <script src="js/routes.js"></script>
+</body>
+</html>
