@@ -1,8 +1,6 @@
 ( function() {
 'use strict';
 
-
-
 var signupController = function (MenuService) {
     var controller = this;
 
@@ -20,9 +18,10 @@ var signupController = function (MenuService) {
             return;
         }
 
-        MenuService.getFavoriteDish(controller.user.favoriteDish)
+        MenuService.getFavoriteDishFromForm(controller.user.favoriteDish)
                     .then(function(response) {
                         controller.user.favoriteDishDetails = response.data;
+                        console.log(controller.user.favoriteDish);
                         MenuService.saveUser(controller.user);
                         controller.showMessage = true;
                     }, function(error) {
@@ -32,7 +31,7 @@ var signupController = function (MenuService) {
     }
 
     controller.onBlur = function () {
-        MenuService.getFavoriteDish(controller.user.favoriteDish)
+        MenuService.getFavoriteDishFromForm(controller.user.favoriteDish)
                     .then(function(response) {
                         controller.user.favoriteDishDetails = response.data;
                         controller.showError = false;
@@ -44,6 +43,5 @@ var signupController = function (MenuService) {
 };
 
 signupController.$inject = ['MenuService'];
-angular.module('public')
-        .controller('SignupController', signupController);
+angular.module('public').controller('SignupController', signupController);
 })();

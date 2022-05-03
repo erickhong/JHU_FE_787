@@ -17,19 +17,24 @@ function MenuService($http, ApiBasePath) {
     };
 
     service.getMenuItems = function (category) {
-    var config = {};
-    if (category) {
-        config.params = {'category': category};
-    }
+        var config = {};
+        if (category) {
+            config.params = {'category': category};
+        }
 
-    return $http.get(ApiBasePath + '/menu_items.json', config)
-                .then(function (response) {
+        return $http.get(ApiBasePath + '/menu_items.json', config)
+                    .then(function (response) {
                         return response.data;
                     }
-                );
+        );
     };
 
+    service.getFavoriteDishFromForm = function(short_name) {
+        return $http.get(ApiBasePath + '/menu_items/' + short_name + '.json');
+    }
+
     service.getFavoriteDish = function(short_name) {
+
         return $http.get(ApiBasePath + '/menu_items/' + short_name + '.json')
                 .then(function (response) {
                         return response.data;
@@ -39,7 +44,7 @@ function MenuService($http, ApiBasePath) {
 
     service.user = {};
     service.saveUser = function(user) {
-        service.user = angular.copy(user);
+        service.user = user;
     }
 
     service.getUser = function() {

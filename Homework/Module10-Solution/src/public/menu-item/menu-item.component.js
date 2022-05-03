@@ -10,11 +10,10 @@ angular.module('public')
   controller: MenuItemController
 });
 
-
-MenuItemController.$inject = ['ApiPath'];
-function MenuItemController(ApiPath) {
+MenuItemController.$inject = ['ApiBasePath'];
+function MenuItemController(ApiBasePath) {
   var $ctrl = this;
-  $ctrl.basePath = ApiPath;
+  $ctrl.basePath = ApiBasePath;
 }
 
 })();

@@ -1,15 +1,17 @@
 <div class="container">
     <div class="row">
         <div ng-show="infoCtrl.signedUp">
-            <h1>Showing information for user.</h1>
+            <h1>Showing information for user</h1>
             <p><b>First Name:</b> {{infoCtrl.user.firstName}}</p>
             <p><b>Last Name:</b> {{infoCtrl.user.lastName}}</p>
             <p><b>Email Address:</b> {{infoCtrl.user.email}}</p>
             <p><b>Phone Number:</b> {{infoCtrl.user.phone}}</p>
+            <h1>Showing favorite dish</h1>
+            <img class="img-responsive" ng-src="{{infoCtrl.ApiBasePath}}/images/{{infoCtrl.user.favoriteDish}}.jpg"/>
             <p><b>Menu Number of Favorite Dish:</b> {{infoCtrl.user.favoriteDish}}</p>
             <p><b>Favorite Dish:</b> {{infoCtrl.user.favoriteDishDetails.name}}</p>
-            <p><b>Favorite Dish Description:</b> {{infoCtrl.user.favoriteDishDetails.name}}</p>
-            <img class="img-responsive" ng-src="{{infoCtrl.apiPath}}/images/{{infoCtrl.user.favoriteDish}}.jpg"/>
+            <p><b>Favorite Dish Description:</b> {{infoCtrl.user.favoriteDishDetails.description}}</p>
+
         </div>
         <div ng-hide="infoCtrl.signedUp">
             <h1>Not Signed Up Yet</h1>

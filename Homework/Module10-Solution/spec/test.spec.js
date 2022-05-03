@@ -71,6 +71,7 @@ describe('menuservice', function () {
                 }
             );
         });
+
         $httpBackend.flush();
   });
 
